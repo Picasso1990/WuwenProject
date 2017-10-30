@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linguangyu.wuwenproject.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="无闻"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_voice"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_voice"
+            android:text="@string/voice" />
+
+        <RadioButton
+            android:id="@+id/rb_chat"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_chat"
+            android:text="@string/chat" />
+
+        <RadioButton
+            android:id="@+id/rb_note"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_note"
+            android:text="@string/note" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/div_white" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:layout_below="@+id/appBarLayout"/>
+
+
+</RelativeLayout>

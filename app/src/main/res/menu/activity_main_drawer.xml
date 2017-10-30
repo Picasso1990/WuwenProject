@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_good"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/gond" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/feedback" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/nav_regard"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="@string/regard" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/settings" />
+    </group>
+
+    <item android:title="@string/Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/send" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">WuwenProject</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="titleName">无闻</string>
+    <string name="introduce">一款实时语音交流的APP</string>
+    <string name="gond">给个好评</string>
+    <string name="feedback">我要反馈</string>
+    <string name="help">帮助中心</string>
+    <string name="regard">关于我们</string>
+    <string name="settings">设置</string>
+    <string name="Communicate">沟通</string>
+    <string name="share">分享</string>
+    <string name="send">发送邮件</string>
+    <string name="voice">分贝</string>
+    <string name="chat">交流</string>
+    <string name="note">短信</string>
+    <string name="db_max">最大</string>
+    <string name="db_min">最小</string>
+    <string name="db_avg">平均</string>
+    <string name="start">开始检测</string>
+</resources>

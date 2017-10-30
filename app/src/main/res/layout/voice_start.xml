@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:text="开始检测"
+        android:layout_centerInParent="true"
+        android:background="@color/text_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="0-20db 极静 几乎感觉不到"
+        android:layout_below="@+id/soundDiscView"
+        android:layout_alignLeft="@+id/soundDiscView"
+        android:layout_alignStart="@+id/soundDiscView" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="20-40db 安静 犹如轻声絮语"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="40-60db 一般 普通室内谈话"
+        android:layout_below="@+id/textView14"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="60-70db 吵闹 有损神经"
+        android:layout_below="@+id/textView15"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="70-90db 很吵 神经细胞受到破坏"
+        android:layout_below="@+id/textView16"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="90-100db 吵闹加剧 听力受损"
+        android:layout_below="@+id/textView17"
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17" />
+
+</RelativeLayout>
