@@ -2,6 +2,7 @@ package com.linguangyu.wuwenproject;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.support.v4.view.ViewPager;
@@ -16,8 +17,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
+import com.linguangyu.wuwenproject.activity.EmailActivity;
+import com.linguangyu.wuwenproject.activity.HelpActivity;
+import com.linguangyu.wuwenproject.activity.IatSettings;
 import com.linguangyu.wuwenproject.activity.MainActivityText;
+import com.linguangyu.wuwenproject.activity.RegardActivity;
 import com.linguangyu.wuwenproject.adapter.MyFragmentPagerAdapter;
 
 
@@ -40,18 +48,12 @@ public class MainActivity extends AppCompatActivity
     public static final int PAGE_TWO = 1;
     public static final int PAGE_THREE = 2;
 
-    //录音所需的常量
-//    float volume = 10000;
-//    private static final int msgWhat = 0x1001;
-//    private static final int refreshTime = 100;
-//
-//    private SoundDiscView soundDiscView;
-//    private MyMediaRecorder mRecorder;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SpeechUtility.createUtility(this, SpeechConstant.APPID +"=59ef2312");
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         bindViews();
@@ -60,7 +62,6 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -113,20 +114,42 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_good) {
-            // Handle the camera action
+
+            Toast.makeText(MainActivity.this,"抱歉，该功能正在努力实现，谢谢您的好评",Toast.LENGTH_SHORT).show();
+
         } else if (id == R.id.nav_feedback) {
-            Intent intent = new Intent(MainActivity.this,MainActivityText.class);
-            startActivity(intent);
+
+            Intent intent_send = new Intent(MainActivity.this, EmailActivity.class);
+            startActivity(intent_send);
 
         } else if (id == R.id.nav_help) {
 
+            Intent intent_help = new Intent(MainActivity.this, HelpActivity.class);
+            startActivity(intent_help);
+
         } else if (id == R.id.nav_regard) {
+
+            Intent intent_regard = new Intent(MainActivity.this, RegardActivity.class);
+            startActivity(intent_regard);
 
         } else if (id == R.id.nav_settings) {
 
+            Intent intent = new Intent(MainActivity.this, IatSettings.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_share) {
 
+            Intent intent_share=new Intent(Intent.ACTION_SEND);
+            intent_share.setType("text/plain"); //"image/*"
+            intent_share.putExtra(Intent.EXTRA_SUBJECT,"共享软件");
+            intent_share.putExtra(Intent.EXTRA_TEXT, "我在安卓市场发现了“无闻”这个软件，快来......下载吧！！");
+            intent_share.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(Intent.createChooser(intent_share, "选择分享类型"));
+
         } else if (id == R.id.nav_send) {
+
+            Intent intent_send = new Intent(MainActivity.this,EmailActivity.class);
+            startActivity(intent_send);
 
         }
 
@@ -197,6 +220,4 @@ public class MainActivity extends AppCompatActivity
         }
     }
     //以上是导航栏所需的方法
-
-
 }

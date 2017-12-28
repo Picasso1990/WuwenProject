@@ -26,8 +26,6 @@ import static com.linguangyu.wuwenproject.R.id.button1;
 
 public class MyFragment_1 extends Fragment {
 
-
-
     public MyFragment_1(){
 
     }

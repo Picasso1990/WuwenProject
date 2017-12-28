@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+        <Button
+            android:id="@+id/button_yuyin"
+            android:background="@drawable/ic_action_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <EditText
+            android:id="@+id/edit_write"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/button_yuyin"
+            android:layout_toLeftOf="@+id/iatCommonAdd"
+            android:maxLines="2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/iatCommonAdd"
+            android:background="@drawable/ic_action_iatadd"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/button_send"
+            android:background="@drawable/ic_action_send"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+
+
+</RelativeLayout>

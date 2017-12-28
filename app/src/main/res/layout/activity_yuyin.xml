@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/activity_title"/>
+
+    <ListView
+        android:id="@+id/list_item_1"
+        android:cacheColorHint="#00000000"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/view_1"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_above="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2px" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:background="@color/bg_white"
+        android:layout_above="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/yuyin_bar"
+            />
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/line2"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp">-->
+        <!--<Button-->
+            <!--android:id="@+id/speeder"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/button"-->
+            <!--android:text="@string/speeder"-->
+            <!--android:textSize="13sp"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/tts_cancel"-->
+            <!--android:layout_toRightOf="@+id/speeder"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/button"-->
+            <!--android:text="@string/cancel"-->
+            <!--android:textSize="13sp"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/tts_pause"-->
+            <!--android:layout_toRightOf="@+id/tts_cancel"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/button"-->
+            <!--android:textSize="13sp"-->
+            <!--android:text="@string/pause"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/tts_resume"-->
+            <!--android:layout_toRightOf="@+id/tts_pause"-->
+            <!--android:layout_marginLeft="4dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/button"-->
+            <!--android:textSize="13sp"-->
+            <!--android:text="@string/resume"/>-->
+
+
+    <!--</RelativeLayout>-->
+    <LinearLayout
+        android:id="@id/line2"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+
+        <Button
+            android:id="@+id/speeder"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/button"
+            android:textSize="13sp"
+            android:text="@string/speeder"/>
+        <Button
+            android:id="@+id/tts_cancel"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/button"
+            android:textSize="13sp"
+            android:text="@string/cancel"/>
+        <Button
+            android:id="@+id/tts_pause"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/button"
+            android:textSize="13sp"
+            android:text="@string/pause" />
+        <Button
+            android:id="@+id/tts_resume"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/button"
+            android:textSize="13sp"
+            android:text="@string/resume"/>
+
+</LinearLayout>
+
+
+</RelativeLayout>

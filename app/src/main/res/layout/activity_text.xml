@@ -3,17 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/activity_chat_title"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/title_seting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <com.linguangyu.wuwenproject.view.SoundDiscView
         android:id="@+id/soundDiscView"
         android:layout_centerInParent="true"
         android:layout_width="344dp"
         android:layout_height="368dp"
         android:background="@drawable/noise_disc" />
-    <Button
-        android:id="@+id/button2"
-        android:text="返回"
-        android:layout_below="@+id/soundDiscView"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 </RelativeLayout>

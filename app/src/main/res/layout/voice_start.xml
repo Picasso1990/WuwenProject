@@ -8,7 +8,7 @@
         android:id="@+id/button1"
         android:text="开始检测"
         android:layout_centerInParent="true"
-        android:background="@color/text_green"
+        android:background="@mipmap/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -16,13 +16,15 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="27dp"
         android:textColor="#000"
         android:textSize="16dp"
         android:text="0-20db 极静 几乎感觉不到"
-        android:layout_below="@+id/soundDiscView"
-        android:layout_alignLeft="@+id/soundDiscView"
-        android:layout_alignStart="@+id/soundDiscView" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button1"
+        android:layout_alignEnd="@+id/button1"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
 
     <TextView
         android:id="@+id/textView14"
